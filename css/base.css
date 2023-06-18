@@ -162,19 +162,26 @@ img {
 .navbar {
   font-weight: 600;
   padding: 8px 16px 16px 16px;
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 0px 20px;
+  gap: 0px 20px; */
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 30px;
 }
-.navbar__left {
+.navbar__menu {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 0 35px;
 }
 .navbar__logo {
+  display: inline-block;
 }
 .navbar__logo-ico {
+  vertical-align: middle;
 }
 .navbar__items {
   display: flex;
@@ -192,11 +199,9 @@ img {
 }
 .navbar__item-link {
 }
-.navbar__right {
-}
 .navbar__btn {
   width: 100px;
-  height: 40px;
+  min-height: 40px;
 }
 
 /* ------------------Header------------- */
@@ -228,7 +233,7 @@ img {
 }
 .header__btn {
   width: 150px;
-  height: 48px;
+  min-height: 48px;
   margin-bottom: 80px;
 }
 .header__arrow {
@@ -288,7 +293,7 @@ img {
 }
 .description__btn {
   width: 120px;
-  height: 48px;
+  min-height: 48px;
   display: block;
   margin: 0 auto;
   font-weight: 600;
@@ -333,7 +338,7 @@ img {
 }
 .info__content-btn {
   margin-top: 40px;
-  height: 48px;
+  min-height: 48px;
   width: 100%;
 }
 
@@ -344,9 +349,6 @@ img {
   padding-bottom: 40px;
 }
 .menu__inner {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
   text-align: center;
 }
 .menu__title {
@@ -361,49 +363,65 @@ img {
   margin-bottom: 22px;
 }
 .menu__btn {
+  margin-top: 50px;
   font-weight: 600;
-  height: 48px;
+  min-height: 48px;
   width: 158px;
 }
 .menu__slider {
-  margin-bottom: 50px;
+  order: 2;
 }
 .menu__slider-wrapper {
 }
 .menu__slider-item {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
+  height: 315px;
 }
 .menu__slider-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  display: none;
+.menu__slider-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
 }
 .menu__slider-arrow {
-  width: 40px;
-  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
   border: 1px solid #067a46;
+  outline: none;
   border-radius: 50%;
-  background: transparent;
-  color: #067a46;
-  font-size: 36px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
+  min-width: 40px;
+  min-height: 40px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 .menu__slider-arrow--left {
-  left: 0;
+  order: 1;
 }
 .menu__slider-arrow--right {
-  right: 0;
+  order: 3;
 }
-
+.swiper-button-disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.menu__slider-pagination {
+  display: none;
+}
+.swiper-pagination-bullet-active {
+  background-color: #067a46;
+}
+.menu__btn {
+  margin-top: 30px;
+}
 /* ---------------Posts----------- */
 
 .posts {
@@ -476,7 +494,7 @@ img {
 }
 .plans__btn {
   width: 148px;
-  height: 48px;
+  min-height: 48px;
 }
 
 /* ---------------Questions---------- */
@@ -512,7 +530,7 @@ img {
 .questions__item-btn {
   cursor: pointer;
   width: 40px;
-  height: 40px;
+  min-height: 40px;
   border: 1px solid #242424;
   border-radius: 50%;
   background: transparent;
@@ -695,7 +713,7 @@ img {
   background-color: #f8f8f8;
   border-radius: 15px;
   padding: 10px 0 15px 0;
-  width: 200px;
+  width: max-content;
   border: 1px solid #067a46;
   transform: translateY(20%);
   transition: all 0.4s ease;
@@ -712,6 +730,9 @@ img {
 }
 
 .dropdown-link {
+  color: #242424;
+  font-size: 16px;
+  line-height: 17px;
   border-radius: 3px;
   display: block;
   padding: 4px 20px;
@@ -735,6 +756,7 @@ img {
   border-radius: 50%;
   border: 1px solid #242424;
   padding: 10px;
+  margin-left: auto;
 }
 
 .burger-ico {
@@ -758,6 +780,11 @@ img {
 }
 .burger-line--second {
   top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
 }
 .burger-line--third {
   bottom: 0;

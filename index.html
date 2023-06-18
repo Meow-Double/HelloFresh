@@ -9,11 +9,13 @@
       content="Макет для верстки сайта был взял с телеграм канала FIGMA | Макеты для верстки"
     />
     <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/media.css" />
+    <!-- <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/media.css" /> -->
+    <link rel="stylesheet" href="./css/min.base.css">
 
     <script src="./libs/swiper/swiper-bundle.min.js" defer></script>
-    <script src="./js/app.js" defer></script>
+    <!-- <script src="./js/app.js" defer></script> -->
+    <script src="./js/min.app.js" defer></script>
   </head>
   <body>
     <!-- Начало: Данный блок удалять нельзя -->
@@ -35,13 +37,13 @@
     <div class="main">
    
         <nav class="navbar">
-            
-                <div class="navbar__left">
-                    <a href="#!" class="navbar__logo">
-                        <img src="./img/logo.svg" alt="" class="navbar__logo-ico">
-                    </a>
-                    <div class="burger-page">        
-                        <ul class="navbar__items">
+            <a href="#!" class="navbar__logo">
+                <img src="./img/logo.svg" alt="" class="navbar__logo-ico">
+            </a>
+            <div class="burger-page">  
+                <div class="navbar__menu">
+                    
+                    <ul class="navbar__items">
                             <li class="navbar__item">
                                 <a href="#!" class="navbar__item-link">Our Plans</a>
                             </li>
@@ -53,13 +55,13 @@
                                     <span>
                                         <!-- <img class="navbar__item-arrow" src="./img/question-arrow.svg" alt=""> -->
                                         <svg class="navbar__item-arrow" width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path class="navbar__item-arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.60156 8.23339L0.601562 2.23339L1.93456 0.900391L6.60156 5.56739L11.2676 0.900391L12.6016 2.23339L6.60156 8.23339Z" fill="#242424"/>
+                                            <path class="navbar__item-arrow--color" fill-rule="evenodd" clip-rule="evenodd" d="M6.60156 8.23339L0.601562 2.23339L1.93456 0.900391L6.60156 5.56739L11.2676 0.900391L12.6016 2.23339L6.60156 8.23339Z" fill="#242424"/>
                                             </svg>
                                     </span>
                                 </a>
                                 <ul class="dropdown">
                                     <li class="dropdown-item">
-                                        <a href="#!" class="dropdown-link">item 1</a>
+                                        <a href="#!" class="dropdown-link">item 1 text...</a>
                                     </li>
                                     <li class="dropdown-item">
                                         <a href="#!" class="dropdown-link">item 2</a>
@@ -77,7 +79,7 @@
                                     <span>
                                         <!-- <img class="navbar__item-arrow" src="./img/question-arrow.svg" alt=""> -->
                                         <svg class="navbar__item-arrow" width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path class="navbar__item-arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.60156 8.23339L0.601562 2.23339L1.93456 0.900391L6.60156 5.56739L11.2676 0.900391L12.6016 2.23339L6.60156 8.23339Z" fill="#242424"/>
+                                            <path class="navbar__item-arrow--color" fill-rule="evenodd" clip-rule="evenodd" d="M6.60156 8.23339L0.601562 2.23339L1.93456 0.900391L6.60156 5.56739L11.2676 0.900391L12.6016 2.23339L6.60156 8.23339Z" fill="#242424"/>
                                             </svg>
                                     </span>
                                 </a>
@@ -96,19 +98,17 @@
                             <li class="navbar__item">
                                 <a href="#!" class="navbar__item-link">Thanksgiving Box</a>
                             </li>
-                        </ul>
-                    </div>
-                </div>    
-            <div class="navbar__right">
+                    </ul>
                     <button class="navbar__btn button">Login</button>
+                </div>    
             </div>
             <div class="navbar__burger burger burger--active">
-                    <div class="burger-ico">
-                        <div class="burger-line burger-line--first"></div>
-                        <div class="burger-line burger-line--second"></div>
-                        <div class="burger-line burger-line--third"></div>
-                    </div>
-            </div>      
+                <div class="burger-ico">
+                    <div class="burger-line burger-line--first"></div>
+                    <div class="burger-line burger-line--second"></div>
+                    <div class="burger-line burger-line--third"></div>
+                </div>
+            </div>
            
         </nav>
         <header class="header" style="background-image: url(./img/header-bg.jpg);">
@@ -187,25 +187,39 @@
                 <div class="menu__inner">
                     <h2 class="menu__title">Over 30+ fresh recipes every week</h2>
                     <div class="menu__subtitle">Easy meals designed by professional chefs and nutritionists</div>
-                    <div class="swiper menu__slider ">
-                        <div class="swiper-wrapper menu__slider-wrapper ">
-                            <div class="swiper-slide menu__slider-item ">
-                                <img src="./img/slider-item-1.jpg" alt="" class="menu__slider-img">
+                    <div class="menu__slider-box">
+                            <div class="menu__slider-arrow menu__slider-arrow--left">
+                                <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.42898 0.971174L8.40796 0.952274C8.11918 0.69259 7.67914 0.69907 7.39813 0.967143L0.61509 7.43789C0.466609 7.57954 0.461067 7.81473 0.602713 7.96321C0.608786 7.96958 0.615084 7.97573 0.621594 7.98165L7.56495 14.2951C7.85464 14.5585 8.29901 14.552 8.58081 14.2802L8.59434 14.2671C8.86067 14.0102 8.86831 13.586 8.6114 13.3197C8.60138 13.3093 8.59103 13.2993 8.58036 13.2895L2.42097 7.67904L8.44288 1.94446C8.70809 1.69191 8.71835 1.27217 8.46579 1.00695C8.45399 0.994557 8.44171 0.982621 8.42898 0.971174Z" fill="#067A46"/>
+                                </svg>
+                                    
                             </div>
-                            <div class="swiper-slide menu__slider-item ">
-                                <img src="./img/slider-item-2.jpg" alt="" class="menu__slider-img">
-                            </div>
-                            <div class="swiper-slide menu__slider-item ">
-                                <img src="./img/slider-item-3.jpg" alt="" class="menu__slider-img">
-                            </div>
-                            <div class="swiper-slide menu__slider-item ">
-                                <img src="./img/slider-item-4.jpg" alt="" class="menu__slider-img">
-                            </div>
+                            <div class="menu__slider-arrow menu__slider-arrow--right">
+                                <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.371803 13.5171L0.39282 13.536C0.681601 13.7957 1.12164 13.7892 1.40265 13.5211L8.18569 7.05039C8.33417 6.90874 8.33971 6.67355 8.19807 6.52507C8.192 6.5187 8.1857 6.51255 8.17919 6.50663L1.23583 0.193142C0.946145 -0.0702654 0.501774 -0.0637176 0.219975 0.208111L0.206445 0.221163C-0.059888 0.478072 -0.0675268 0.902243 0.189383 1.16858C0.199402 1.17896 0.209754 1.18902 0.220422 1.19874L6.37981 6.80924L0.357901 12.5438C0.0926868 12.7964 0.0824281 13.2161 0.334987 13.4813C0.346793 13.4937 0.359074 13.5057 0.371803 13.5171Z" fill="#067A46"/>
+                                </svg>    
                         </div>
-                        <!-- -------------Swiper-navigation------------- -->
-                        <div class="swiper-button-prev menu__slider-arrow menu__slider-arrow--left">‹</div>
-                        <div class="swiper-button-next menu__slider-arrow menu__slider-arrow--right">›</div>
+                        <div class="swiper menu__slider ">
+                            <div class="swiper-wrapper menu__slider-wrapper ">
+                                <div class="swiper-slide menu__slider-item ">
+                                    <img src="./img/slider-item-1.jpg" alt="" class="menu__slider-img">
+                                </div>
+                                <div class="swiper-slide menu__slider-item ">
+                                    <img src="./img/slider-item-2.jpg" alt="" class="menu__slider-img">
+                                </div>
+                                <div class="swiper-slide menu__slider-item ">
+                                    <img src="./img/slider-item-3.jpg" alt="" class="menu__slider-img">
+                                </div>
+                                <div class="swiper-slide menu__slider-item ">
+                                    <img src="./img/slider-item-4.jpg" alt="" class="menu__slider-img">
+                                </div>
+                            </div>
+                            <!-- -------------Swiper-navigation------------- -->
+
+                        </div>
+                        <div class="menu__slider-pagination"></div>
                     </div>
+                   
                     <button class="menu__btn button">View our menus</button>
                 </div>
             </div>
