@@ -385,11 +385,13 @@ img {
 }
 .menu__slider-box {
   position: relative;
+  height: 100%;
 }
 .menu__slider-content {
   position: absolute;
   left: 12px;
   bottom: 20px;
+  text-align: start;
 
 }
 .menu__slider-page{
@@ -432,8 +434,7 @@ img {
   background-color: #476B2D;
   color:#fff;
 }
-.menu__slider-box {
-  height: 100%;
+.menu__slider-btn-box {
   display: flex;
   align-items: center;
   justify-content: space-between;
