@@ -41,7 +41,7 @@ accordionBtn.forEach((item, index) => {
   item.addEventListener("click", () => {
     try {
       const accordionItem = document.querySelector(
-        `.${item.getAttribute("accordion-item")}`
+        `.${item.getAttribute("data-accordion-item")}`
       );
       accordionItem.classList.toggle("accordion--active");
       accordionImg[index].classList.toggle("accordion--img");
