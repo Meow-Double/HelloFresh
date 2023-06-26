@@ -311,6 +311,12 @@
   .menu {
     padding-bottom: 20px;
   }
+  .menu__slider-btn-box{
+    display: block;
+  }
+  .menu__slider-pagination{
+    padding-top: 20px;
+  }
 }
 @media screen and (max-width: 430px) {
   .header__content {
